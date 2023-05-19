@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RecipeByIngredient from './components/RecipeByIngredient';
+import Details from './components/Details';
 
 function App() {
   const [data, setData] = useState([
@@ -47,10 +48,10 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="body">
-          
           <Routes>
             <Route path='/' element={<RecipeList recipes={recipes} />}/>
             <Route path='/ingredient/:ingredient' element={<RecipeByIngredient recipes={data} />}/>
+            <Route path='/recipes/:recipeId' element={<Details data={data} />}/>
           </Routes>
         </div>
       </div></BrowserRouter>
