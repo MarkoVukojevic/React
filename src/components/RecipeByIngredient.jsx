@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Recipe from "./Recipe";
 import { useState } from "react";
+import RecipeList from "./RecipeList";
 
 const RecipeByIngredient = ({ recipes }) => {
     const { ingredient } = useParams();
@@ -8,9 +9,7 @@ const RecipeByIngredient = ({ recipes }) => {
 
     return (
         <div className="recipe-by-ingredient">
-            {show && show.map((recipe) =>
-                <Recipe recipe={recipe} />
-            )}
+            <RecipeList recipes={show}/>
         </div>
     );
 }
