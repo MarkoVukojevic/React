@@ -26,7 +26,7 @@ const RecipeList = ({ recipes }) => {
             {recipes && show.map((recipe) => (
                 <Recipe recipe={recipe} key={recipe.id}/>
             ))}
-        </div>//test
+        </div>
      );
 }
  
